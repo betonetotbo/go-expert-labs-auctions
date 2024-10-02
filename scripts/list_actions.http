@@ -1,9 +1,0 @@
-GET http://localhost:8080/auction?status=0
-
-###
-
-GET http://localhost:8080/auction?status=1
-
-###
-
-GET http://localhost:8080/auction/winner/4ed0e853-4826-476a-a550-c71b09ca7de9

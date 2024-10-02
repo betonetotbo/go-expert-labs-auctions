@@ -1,8 +1,0 @@
-POST http://localhost:8080/auction
-
-{
-    "product_name":"produto 3",
-    "category":"categoria",
-    "description":"desicricao descricao",
-    "condition": 1
-}

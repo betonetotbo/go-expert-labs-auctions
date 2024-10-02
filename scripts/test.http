@@ -1,0 +1,34 @@
+### Create a new auction
+
+POST http://localhost:8080/auction
+
+{
+    "product_name":"produto 4",
+    "category":"categoria",
+    "description":"desicricao descricao",
+    "condition": 1
+}
+
+> {% client.global.set("last_auction", response.body.id); %}
+
+### Create a new BID for latest created auction
+
+POST http://localhost:8080/bid
+
+{
+"user_id": "00000000-0000-0000-0000-000000000000",
+"auction_id": "{{last_auction}}",
+"amount": {{$random.float(1.0, 50.0)}}
+}
+
+### Get latest created auction WINNER bid
+
+GET http://localhost:8080/auction/winner/{{last_auction}}
+
+### Get latest created auction info
+
+GET http://localhost:8080/auction/{{last_auction}}
+
+### List all auctions
+
+GET http://localhost:8080/auction?status=0

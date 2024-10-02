@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48104dad-c159-45e2-ac07-8d38cefdd655" name="Changes" comment="auto-close de auction">
+      <change afterPath="$PROJECT_DIR$/scripts/test.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/auction/.env" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/auction/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/auction/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/auction/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/infra/api/web/controller/auction_controller/create_auction_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/api/web/controller/auction_controller/create_auction_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/usecase/auction_usecase/create_auction_usecase.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/usecase/auction_usecase/create_auction_usecase.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create_auction.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create_bid.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/list_actions.http" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,9 @@
   <component name="GOROOT" url="file:///snap/go/current" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="file:///tmp/whats-new-dir/whats-new.http" environment="test" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -31,10 +38,19 @@
   "keyToString": {
     "Go Build.go build main.go.executor": "Debug",
     "HTTP Request.create_auction | #1.executor": "Run",
+    "HTTP Request.create_auction | #2.executor": "Run",
+    "HTTP Request.create_auction_bid | #2.executor": "Run",
+    "HTTP Request.create_auction_bid | #3.executor": "Run",
+    "HTTP Request.create_auction_bid | #4.executor": "Run",
+    "HTTP Request.create_auction_bid | Create a new BID for latest created auction.executor": "Run",
+    "HTTP Request.create_auction_bid | Create a new auction.executor": "Run",
+    "HTTP Request.create_auction_bid | Get latest created auction WINNER bid.executor": "Run",
+    "HTTP Request.create_auction_bid | Get latest created auction info.executor": "Run",
     "HTTP Request.create_bid | #1.executor": "Run",
     "HTTP Request.list_actions | #1.executor": "Run",
     "HTTP Request.list_actions | #2.executor": "Run",
     "HTTP Request.list_actions | #3.executor": "Run",
+    "HTTP Request.test | List all auctions.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
@@ -54,46 +70,36 @@
       <recent name="$PROJECT_DIR$/scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-expert-labs-auctions" />
-      <working_directory value="$PROJECT_DIR$" />
-      <envs>
-        <env name="MAX_BATCH_SIZE" value="1" />
-        <env name="MONGODB_URL" value="mongodb://admin:admin@localhost:27017/auctions?authSource=admin" />
-      </envs>
-      <kind value="FILE" />
-      <package value="github.com/betonetotbo/go-expert-labs-auctions" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/cmd/auction/main.go" />
+  <component name="RunManager" selected="HTTP Request.test | List all auctions">
+    <configuration name="create_auction_bid | Create a new BID for latest created auction" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction_bid.http" index="2" requestIdentifier="Create a new BID for latest created auction" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="create_auction | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="create_auction_bid | Create a new auction" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction_bid.http" requestIdentifier="Create a new auction" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="create_bid | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_bid.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="create_auction_bid | Get latest created auction WINNER bid" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction_bid.http" index="3" requestIdentifier="Get latest created auction WINNER bid" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="list_actions | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/list_actions.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="create_auction_bid | Get latest created auction info" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction_bid.http" index="4" requestIdentifier="Get latest created auction info" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="list_actions | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/list_actions.http" index="3" requestIdentifier="#3" runType="Run single request">
+    <configuration name="test | List all auctions" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/test.http" index="5" requestIdentifier="List all auctions" runType="Run single request">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build main.go" />
-      <item itemvalue="HTTP Request.create_auction | #1" />
-      <item itemvalue="HTTP Request.create_bid | #1" />
-      <item itemvalue="HTTP Request.list_actions | #1" />
-      <item itemvalue="HTTP Request.list_actions | #3" />
+      <item itemvalue="HTTP Request.create_auction_bid | Create a new BID for latest created auction" />
+      <item itemvalue="HTTP Request.create_auction_bid | Create a new auction" />
+      <item itemvalue="HTTP Request.create_auction_bid | Get latest created auction WINNER bid" />
+      <item itemvalue="HTTP Request.create_auction_bid | Get latest created auction info" />
+      <item itemvalue="HTTP Request.test | List all auctions" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="HTTP Request.create_bid | #1" />
-        <item itemvalue="HTTP Request.list_actions | #1" />
-        <item itemvalue="HTTP Request.create_auction | #1" />
-        <item itemvalue="HTTP Request.list_actions | #3" />
+        <item itemvalue="HTTP Request.test | List all auctions" />
+        <item itemvalue="HTTP Request.create_auction_bid | Get latest created auction WINNER bid" />
+        <item itemvalue="HTTP Request.create_auction_bid | Create a new BID for latest created auction" />
+        <item itemvalue="HTTP Request.create_auction_bid | Create a new auction" />
+        <item itemvalue="HTTP Request.create_auction_bid | Get latest created auction info" />
       </list>
     </recent_temporary>
   </component>

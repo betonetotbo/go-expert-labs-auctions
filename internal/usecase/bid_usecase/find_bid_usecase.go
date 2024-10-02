@@ -2,7 +2,7 @@ package bid_usecase
 
 import (
 	"context"
-	"fullcycle-auction_go/internal/internal_error"
+	"github.com/betonetotbo/go-expert-labs-auctions/internal/internal_error"
 )
 
 func (bu *BidUseCase) FindBidByAuctionId(

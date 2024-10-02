@@ -2,10 +2,10 @@ package auction_usecase
 
 import (
 	"context"
-	"fullcycle-auction_go/internal/entity/auction_entity"
-	"fullcycle-auction_go/internal/entity/bid_entity"
-	"fullcycle-auction_go/internal/internal_error"
-	"fullcycle-auction_go/internal/usecase/bid_usecase"
+	"github.com/betonetotbo/go-expert-labs-auctions/internal/entity/auction_entity"
+	"github.com/betonetotbo/go-expert-labs-auctions/internal/entity/bid_entity"
+	"github.com/betonetotbo/go-expert-labs-auctions/internal/internal_error"
+	"github.com/betonetotbo/go-expert-labs-auctions/internal/usecase/bid_usecase"
 	"time"
 )
 

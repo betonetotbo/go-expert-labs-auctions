@@ -1,7 +1,7 @@
 package rest_err
 
 import (
-	"fullcycle-auction_go/internal/internal_error"
+	"github.com/betonetotbo/go-expert-labs-auctions/internal/internal_error"
 	"net/http"
 )
 

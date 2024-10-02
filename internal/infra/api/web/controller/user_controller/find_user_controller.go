@@ -2,8 +2,8 @@ package user_controller
 
 import (
 	"context"
-	"fullcycle-auction_go/configuration/rest_err"
-	"fullcycle-auction_go/internal/usecase/user_usecase"
+	"github.com/betonetotbo/go-expert-labs-auctions/configuration/rest_err"
+	"github.com/betonetotbo/go-expert-labs-auctions/internal/usecase/user_usecase"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"net/http"

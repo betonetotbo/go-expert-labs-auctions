@@ -16,6 +16,7 @@ import (
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"log"
+	"os"
 )
 
 func main() {
@@ -44,7 +45,11 @@ func main() {
 	router.GET("/bid/:auctionId", bidController.FindBidByAuctionId)
 	router.GET("/user/:userId", userController.FindUserById)
 
-	router.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = ":8080"
+	}
+	router.Run(port)
 }
 
 func initDependencies(database *mongo.Database) (

@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48104dad-c159-45e2-ac07-8d38cefdd655" name="Changes" comment="Refactor de pacotes">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/create_auction.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/create_bid.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/list_actions.http" afterDir="false" />
+    <list default="true" id="48104dad-c159-45e2-ac07-8d38cefdd655" name="Changes" comment="auto-close de auction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/auction/.env" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/auction/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/infra/database/auction/create_auction.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/auction/create_auction.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/infra/database/bid/create_bid.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/bid/create_bid.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/infra/database/bid/find_bid.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/bid/find_bid.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/auction/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/auction/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +54,14 @@
       <recent name="$PROJECT_DIR$/scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="HTTP Request.create_bid | #1">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-expert-labs-auctions" />
       <working_directory value="$PROJECT_DIR$" />
+      <envs>
+        <env name="MAX_BATCH_SIZE" value="1" />
+        <env name="MONGODB_URL" value="mongodb://admin:admin@localhost:27017/auctions?authSource=admin" />
+      </envs>
       <kind value="FILE" />
       <package value="github.com/betonetotbo/go-expert-labs-auctions" />
       <directory value="$PROJECT_DIR$" />
@@ -84,12 +80,19 @@
     <configuration name="list_actions | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/list_actions.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.go build main.go" />
+      <item itemvalue="HTTP Request.create_auction | #1" />
+      <item itemvalue="HTTP Request.create_bid | #1" />
+      <item itemvalue="HTTP Request.list_actions | #1" />
+      <item itemvalue="HTTP Request.list_actions | #3" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="HTTP Request.create_bid | #1" />
         <item itemvalue="HTTP Request.list_actions | #1" />
         <item itemvalue="HTTP Request.create_auction | #1" />
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="HTTP Request.list_actions | #3" />
       </list>
     </recent_temporary>
@@ -109,7 +112,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Refactor de pacotes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor de pacotes" />
+    <MESSAGE value="auto-close de auction" />
+    <option name="LAST_COMMIT_MESSAGE" value="auto-close de auction" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

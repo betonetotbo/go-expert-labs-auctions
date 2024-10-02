@@ -2,9 +2,14 @@ package auction
 
 import (
 	"context"
+	"fmt"
 	"github.com/betonetotbo/go-expert-labs-auctions/configuration/logger"
 	"github.com/betonetotbo/go-expert-labs-auctions/internal/entity/auction_entity"
 	"github.com/betonetotbo/go-expert-labs-auctions/internal/internal_error"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"os"
+	"time"
 
 	"go.mongodb.org/mongo-driver/mongo"
 )
@@ -46,5 +51,47 @@ func (ar *AuctionRepository) CreateAuction(
 		return internal_error.NewInternalServerError("Error trying to insert auction")
 	}
 
+	go ar.autocloseAuction(auctionEntityMongo)
+
 	return nil
+}
+
+func (ar *AuctionRepository) autocloseAuction(auction *AuctionEntityMongo) {
+	select {
+	case <-time.After(GetAuctionInterval()):
+		logger.Info(fmt.Sprintf("Completing auction (expired): %s", auction.Id))
+
+		filter := bson.D{
+			primitive.E{
+				Key:   "_id",
+				Value: auction.Id,
+			},
+		}
+		update := bson.D{
+			primitive.E{
+				Key: "$set",
+				Value: bson.D{
+					primitive.E{
+						Key:   "status",
+						Value: auction_entity.Completed,
+					},
+				},
+			},
+		}
+
+		_, err := ar.Collection.UpdateOne(context.Background(), filter, update)
+		if err != nil {
+			logger.Error(fmt.Sprintf("Error trying to complete auction: %s", auction.Id), err)
+		}
+	}
+}
+
+func GetAuctionInterval() time.Duration {
+	auctionInterval := os.Getenv("AUCTION_INTERVAL")
+	duration, err := time.ParseDuration(auctionInterval)
+	if err != nil {
+		return time.Minute * 5
+	}
+
+	return duration
 }

@@ -1,0 +1,7 @@
+POST http://localhost:8080/bid
+
+{
+"user_id": "00000000-0000-0000-0000-000000000000",
+"auction_id": "54c7799e-d4b8-40f2-96fc-d16467169ca9",
+"amount": 10.5
+}

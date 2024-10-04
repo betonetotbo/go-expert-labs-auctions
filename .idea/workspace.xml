@@ -5,30 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48104dad-c159-45e2-ac07-8d38cefdd655" name="Changes" comment="auto-close de auction">
-      <change afterPath="$PROJECT_DIR$/scripts/test.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/infra/database/auction/create_auction_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/infra/api/web/controller/auction_controller/create_auction_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/api/web/controller/auction_controller/create_auction_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/usecase/auction_usecase/create_auction_usecase.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/usecase/auction_usecase/create_auction_usecase.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create_auction.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create_bid.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/list_actions.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
   <component name="GOROOT" url="file:///snap/go/current" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HttpClientSelectedEnvironments">
-    <file url="file:///tmp/whats-new-dir/whats-new.http" environment="test" />
-  </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2mrLbhClVIcaSrWR6XEyctlrJr0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,7 +38,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
     "Go Build.go build main.go.executor": "Debug",
+    "Go Test.TestCreateAuction in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction.executor": "Run",
+    "Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction (1).executor": "Debug",
+    "Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction (2).executor": "Debug",
+    "Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction.executor": "Debug",
+    "Go Test.create_auction_test.go.executor": "Run",
     "HTTP Request.create_auction | #1.executor": "Run",
     "HTTP Request.create_auction | #2.executor": "Run",
     "HTTP Request.create_auction_bid | #2.executor": "Run",
@@ -70,36 +78,79 @@
       <recent name="$PROJECT_DIR$/scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="HTTP Request.test | List all auctions">
-    <configuration name="create_auction_bid | Create a new BID for latest created auction" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction_bid.http" index="2" requestIdentifier="Create a new BID for latest created auction" runType="Run single request">
+  <component name="RunManager" selected="Go Test.create_auction_test.go">
+    <configuration name="TestCreateAuction in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-expert-labs-auctions" />
+      <working_directory value="$PROJECT_DIR$/internal/infra/database/auction" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCreateAuction\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="create_auction_bid | Create a new auction" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction_bid.http" requestIdentifier="Create a new auction" runType="Run single request">
+    <configuration name="TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-expert-labs-auctions" />
+      <working_directory value="$PROJECT_DIR$/internal/infra/database/auction" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCreateAuction\E$/^\QAutoClose\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="create_auction_bid | Get latest created auction WINNER bid" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction_bid.http" index="3" requestIdentifier="Get latest created auction WINNER bid" runType="Run single request">
+    <configuration name="TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-expert-labs-auctions" />
+      <working_directory value="$PROJECT_DIR$/internal/infra/database/auction" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCreateAuction\E$/^\QAutoClose\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="create_auction_bid | Get latest created auction info" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/create_auction_bid.http" index="4" requestIdentifier="Get latest created auction info" runType="Run single request">
+    <configuration name="TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-expert-labs-auctions" />
+      <working_directory value="$PROJECT_DIR$/internal/infra/database/auction" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCreateAuction\E$/^\QAutoClose\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="test | List all auctions" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/scripts/test.http" index="5" requestIdentifier="List all auctions" runType="Run single request">
+    <configuration name="create_auction_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-expert-labs-auctions" />
+      <working_directory value="$PROJECT_DIR$/internal/infra/database/auction" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/internal/infra/database/auction/create_auction_test.go" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.create_auction_bid | Create a new BID for latest created auction" />
-      <item itemvalue="HTTP Request.create_auction_bid | Create a new auction" />
-      <item itemvalue="HTTP Request.create_auction_bid | Get latest created auction WINNER bid" />
-      <item itemvalue="HTTP Request.create_auction_bid | Get latest created auction info" />
-      <item itemvalue="HTTP Request.test | List all auctions" />
+      <item itemvalue="Go Test.TestCreateAuction in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" />
+      <item itemvalue="Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" />
+      <item itemvalue="Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction (1)" />
+      <item itemvalue="Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction (2)" />
+      <item itemvalue="Go Test.create_auction_test.go" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.test | List all auctions" />
-        <item itemvalue="HTTP Request.create_auction_bid | Get latest created auction WINNER bid" />
-        <item itemvalue="HTTP Request.create_auction_bid | Create a new BID for latest created auction" />
-        <item itemvalue="HTTP Request.create_auction_bid | Create a new auction" />
-        <item itemvalue="HTTP Request.create_auction_bid | Get latest created auction info" />
+        <item itemvalue="Go Test.create_auction_test.go" />
+        <item itemvalue="Go Test.TestCreateAuction in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" />
+        <item itemvalue="Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction (2)" />
+        <item itemvalue="Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction (1)" />
+        <item itemvalue="Go Test.TestCreateAuction/AutoClose in github.com/betonetotbo/go-expert-labs-auctions/internal/infra/database/auction" />
       </list>
     </recent_temporary>
   </component>
